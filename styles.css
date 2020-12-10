@@ -140,8 +140,8 @@ body {
 }
 
 .levels__item {
-  width: 215px;
-  height: 301px;
+  width: 150px;
+  height: 191px;
   transition: translateY 0.5s, transform 0.5s;
 }
 

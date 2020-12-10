@@ -20,11 +20,11 @@ body {
 }
 
 .start-page {
-  padding: 131px 0 0 26px;
+  margin: 131px 0 0 26px;
   height: 100vh;
   background-image: url(img/cards.png);
   background-repeat: no-repeat;
-  background-position: bottom -258px right -8px;
+  background-position: bottom 2% right 8px;
   box-sizing: border-box;
 }
 
@@ -272,7 +272,7 @@ body {
     font: 28px/33px Roboto bold, arial, helvetica, sans-serif;
     background: #ba376c;
   } 
-  
+
   .game-page__levels {
     grid-template-columns: 87px 87px;
     grid-gap: 1.2vw;

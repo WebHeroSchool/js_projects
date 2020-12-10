@@ -24,7 +24,7 @@ body {
   height: 100vh;
   background-image: url(img/cards.png);
   background-repeat: no-repeat;
-  background-position: bottom 2% right 8px;
+  background-position: top 375px right 8px;
   box-sizing: border-box;
 }
 

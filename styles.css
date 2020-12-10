@@ -21,10 +21,10 @@ body {
 
 .start-page {
   padding: 131px 0 0 26px;
-/*  height: 100vh;*/
+  height: 100vh;
   background-image: url(img/cards.png);
   background-repeat: no-repeat;
-  background-position: bottom 92px right -8px;
+  background-position: bottom -258px right -8px;
   box-sizing: border-box;
 }
 
@@ -49,7 +49,7 @@ body {
 
 .first-part__choosing-list {
   margin-left: 51px;
-  margin-bottom: 52px;
+  margin-bottom: 112px;
 }
 
 .choosing-list__item {
@@ -62,37 +62,50 @@ body {
 }
 
 .choosing-list__item:hover {
-  color: 	rgb(128,0,0);
+  color: #ba376c;
 }
 
 .choosing-list__easy.active {
   position: relative;
-  text-decoration: underline;
-  text-decoration-color: red;
 }
 
+.choosing-list__easy.active::before {
+  position: absolute;
+  content: url(img/rhombus.png);
+  margin-left: -49px;
+  margin-top: -5px;
+}
 
 .choosing-list__middle.active {
   position: relative;
-  text-decoration: underline;
-  text-decoration-color: red;
+}
+
+.choosing-list__middle.active::before {
+  position: absolute;
+  content: url(img/rhombus.png);
+  margin-left: -49px;
+  margin-top: -5px;
 }
 
 .choosing-list__hard.active {
   position: relative;
-  text-decoration: underline;
-  text-decoration-color: red;
 }
 
+.choosing-list__hard.active::before {
+  position: absolute;
+  content: url(img/rhombus.png);
+  margin-left: -49px;
+  margin-top: -5px;
+}
 
 .first-part__button {
   display: inline-block;
-  padding: 10px 40px;
+  padding: 29px 88px;
   text-decoration: none;
   color: white;
   font: 32px/37px Roboto bold, arial, helvetica, sans-serif;
   border-radius: 7px;
-  background: 	rgb(128,0,0);
+  background: #ba376c;
   transition: ease .5s;
 }
 
@@ -255,6 +268,7 @@ body {
   }
 
   .first-part__button {
+    padding: 20px 47px;
     font: 28px/33px Roboto bold, arial, helvetica, sans-serif;
     background: #ba376c;
   } 

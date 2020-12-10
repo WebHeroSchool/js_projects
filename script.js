@@ -4,7 +4,7 @@ for (let button of document.querySelectorAll('.choosing-list__item')) {
     this.classList.add('active');
   });
 }
-
+let current = 0;
 document.querySelector('.first-part__button').addEventListener('click', function(event) {
   let cardsArr = [];
 
@@ -17,24 +17,20 @@ document.querySelector('.first-part__button').addEventListener('click', function
 
   for (let i=0; i<level; i++) {
     let card = document.querySelector('.hidden-page .levels__item').cloneNode(true);
-
     card.addEventListener('click', function(event) {
+      current++;
       if (card.classList.contains('opened')) {
         location.reload();
-      } else {
+      } if (current<2) {
         let setCollection = document.querySelectorAll('.game-page__levels .levels__item');
         let cardIndex = [ ...setCollection ].indexOf(this);
-
-        if (cardsArr.length === 0) {
-          cardsArr = getGameData(setLevel);
-        }
 
         if (cardsArr[cardIndex] > 0) {
           card.classList.add('card-bug', 'opened');
         } else {
           card.classList.add('card-game-over', 'opened');
-        }
-      }
+        } 
+      } else {location.reload();}
     });
 
     document.querySelector('.game-page__levels').append(card);

@@ -1,6 +1,7 @@
+let active = document.querySelector('.active');
 for (let button of document.querySelectorAll('.choosing-list__item')) {
   button.addEventListener('click', function(event) {
-    document.querySelector('.active').classList.remove('active');
+    active.classList.remove('active');
     this.classList.add('active');
   });
 }
@@ -13,7 +14,7 @@ document.querySelector('.first-part__button').addEventListener('click', function
   document.querySelector('.game-page').classList.remove('off');
   gLevel.classList.remove('off');
 
-  let level = document.querySelector('.active').dataset.level;
+  let level = active.dataset.level;
   setLevel = Number(level);
 
   for (let i=0; i<level; i++) {
@@ -29,7 +30,7 @@ document.querySelector('.first-part__button').addEventListener('click', function
         if (cardsArr.length === 0) {
           cardsArr = getGameData(setLevel);
         }
-        
+
         if (cardsArr[cardIndex] > 0) {
           card.classList.add('card-bug', 'opened');
         } else {
@@ -62,5 +63,4 @@ function checkGameResult(cardIndex, level) {
   return {
     cards: cardsArr,
     result: (cardsArr[cardIndex] > 0)
-  }
-}
+}}

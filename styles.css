@@ -142,7 +142,7 @@ body {
 .levels__item {
   width: 215px;
   height: 301px;
-  transition: translateY 0.5s, transform .5s;
+  transition: translateY 0.5s, transform 0.5s;
 }
 
 .levels__item:hover {
@@ -271,7 +271,7 @@ body {
     padding: 20px 47px;
     font: 28px/33px Roboto bold, arial, helvetica, sans-serif;
     background: #ba376c;
-  } 
+  }
 
   .game-page__levels {
     grid-template-columns: 87px 87px;

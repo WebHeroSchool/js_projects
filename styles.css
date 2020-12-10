@@ -106,7 +106,7 @@ body {
   font: 32px/37px Roboto bold, arial, helvetica, sans-serif;
   border-radius: 7px;
   background: #ba376c;
-  transition: ease .5s;
+  transition: ease 0.5s;
 }
 
 .first-part__button:hover {
@@ -142,7 +142,7 @@ body {
 .levels__item {
   width: 215px;
   height: 301px;
-  transition: translateY .5s, transform .5s;
+  transition: translateY 0.5s, transform .5s;
 }
 
 .levels__item:hover {
@@ -156,7 +156,7 @@ body {
 
 .card-game-over.opened {
   transform: none;
-  transiton: none;
+  transition: none;
 }
 
 .card-bug {
@@ -166,7 +166,7 @@ body {
 
 .card-bug.opened {
   transform: none;
-  transiton: none;
+  transition: none;
 }
 
 @media (max-width: 1024px) {
@@ -272,7 +272,7 @@ body {
     font: 28px/33px Roboto bold, arial, helvetica, sans-serif;
     background: #ba376c;
   } 
-
+  
   .game-page__levels {
     grid-template-columns: 87px 87px;
     grid-gap: 1.2vw;

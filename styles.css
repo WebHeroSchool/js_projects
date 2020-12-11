@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  background: url(img/background.jpg);
+}
+
+.off {
+  display: none;
+}
+
+.wrapper {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1290px;
+  z-index: 10;
+  color: white;
+}
+
+.start-page.off {
+  display: none;
+}
+
+.start-page {
+  margin: 131px 0 0 26px;
+  height: 100vh;
+  background-image: url(img/cards.png);
+  background-repeat: no-repeat;
+  background-position: top 375px right 8px;
+  box-sizing: border-box;
+}
+
+.start-page__heading {
+  margin: 0;
+  margin-bottom: 9px;
+  font: 57px/67px Roboto, arial, helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.start-page__subheading {
+  margin: 0;
+  margin-bottom: 60px;
+  font: 19px/22px Roboto, arial, helvetica, sans-serif;
+  font-weight: 700;
+}
+
+.start-page__menu {
+  display: flex;
+  justify-content: space-between;
+}
+
+.first-part__choosing-list {
+  margin-left: 51px;
+  margin-bottom: 112px;
+}
+
+.choosing-list__item {
+  position: relative;
+  cursor: pointer;
+  font: 50px/59px Roboto, arial, helvetica, sans-serif;
+  font-weight: 700;
+  margin-bottom: 24px;
+  transition: color 1s;
+}
+
+.choosing-list__item:hover {
+  color: #ba376c;
+}
+
+.choosing-list__easy.active {
+  position: relative;
+}
+
+.choosing-list__easy.active::before {
+  position: absolute;
+  content: url(img/rhombus.png);
+  margin-left: -49px;
+  margin-top: -5px;
+}
+
+.choosing-list__middle.active {
+  position: relative;
+}
+
+.choosing-list__middle.active::before {
+  position: absolute;
+  content: url(img/rhombus.png);
+  margin-left: -49px;
+  margin-top: -5px;
+}
+
+.choosing-list__hard.active {
+  position: relative;
+}
+
+.choosing-list__hard.active::before {
+  position: absolute;
+  content: url(img/rhombus.png);
+  margin-left: -49px;
+  margin-top: -5px;
+}
+
+.first-part__button {
+  display: inline-block;
+  padding: 29px 88px;
+  text-decoration: none;
+  color: white;
+  font: 32px/37px Roboto bold, arial, helvetica, sans-serif;
+  border-radius: 7px;
+  background: #ba376c;
+  transition: ease 0.5s;
+}
+
+.first-part__button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.game-page.off {
+  display: none;
+}
+
+.game-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.game-page__levels {
+  display: grid;
+  grid-template-columns: 215px 215px 215px;
+  grid-gap: 1.2vw;
+  align-content: center;
+}
+
+.game-page__levels.off {
+  display: none;
+}
+
+.hidden-page.off {
+  display: none;
+}
+
+.levels__item {
+  width: 150px;
+  height: 191px;
+  transition: translateY 0.5s, transform 0.5s;
+}
+
+.levels__item:hover {
+  transform: translateY(-38px) rotate(-3deg);
+}
+
+.card-game-over {
+  transform: rotateY(180deg);
+  content: url(img/game-over.png);
+}
+
+.card-game-over.opened {
+  transform: none;
+  transition: none;
+}
+
+.card-bug {
+  transform: rotateY(180deg);
+  content: url(img/bug.png);
+}
+
+.card-bug.opened {
+  transform: none;
+  transition: none;
+}
+
+@media (max-width: 1024px) {
+  .start-page {
+    height: 100%;
+    background-position: bottom -11px right -8px;
+  }
+
+  .start-page__heading {
+    font: 53px/63px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .start-page__subheading {
+    margin-bottom: 50px;
+    font: 17px/20px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .first-part__choosing-list {
+    margin-bottom: 63px;
+  }
+
+  .choosing-list__item {
+    font: 47px/56px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .game-page__levels {
+    grid-template-columns: 173px 173px 173px;
+    grid-gap: 1.2vw;
+  }
+
+  .levels__item {
+    width: 173px;
+    height: 233px;
+  }
+}
+
+@media (max-width: 920px) {
+  .start-page {
+    padding-top: 45px;
+    padding-bottom: 45px;
+    background-image: none;
+    height: 100%;
+  }
+
+  .start-page__heading {
+    font: 45px/58px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .start-page__subheading {
+    margin-bottom: 50px;
+    font: 15px/18px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .first-part__choosing-list {
+    margin-bottom: 48px;
+  }
+
+  .choosing-list__item {
+    font: 38px/51px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .game-page__levels {
+    grid-template-columns: 139px 139px 139px;
+    grid-gap: 1.2vw;
+  }
+
+  .levels__item {
+    width: 139px;
+    height: 192px;
+  }
+}
+
+@media (max-width: 375px) {
+  .start-page {
+    padding-top: 34px;
+    background-image: none;
+  }
+
+  .start-page__heading {
+    font: 40px/50px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .start-page__subheading {
+    margin-bottom: 34px;
+    font: 12px/15px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .choosing-list__item {
+    font: 40px/49px Roboto, arial, helvetica, sans-serif;
+    font-weight: 700;
+  }
+
+  .first-part__button {
+    padding: 20px 47px;
+    font: 28px/33px Roboto bold, arial, helvetica, sans-serif;
+    background: #ba376c;
+  }
+
+  .game-page__levels {
+    grid-template-columns: 87px 87px;
+    grid-gap: 1.2vw;
+  }
+
+  .levels__item {
+    width: 87px;
+    height: 117px;
+  }
+}
